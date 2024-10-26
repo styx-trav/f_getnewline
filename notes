@@ -1,0 +1,11 @@
+static variables : initialized first time it's read, then conserves its value across the program - not a global variable, but within the function if it's called again, maintains its new value (count++ when called, will go 0 to 1 to 2 with each call to the function itself).
+
+plan of attack for the basic functionality :
+having some trouble with the null when read is over part of the deal. apart from that, works great so far ! good job.
+
+we'll start the *buffer* as a static variable. i misunderstood the assignment.
+so, first we get the static i (start into the existing buffer if not null);
+	if there's another newline in that, we send it back just like that;
+	if there isn't, start reading again, all while appending to our str, realloc type beat, on repeat until either \n or \0 encountered.
+
+!!remember, fill the buffer with nuls when unused so we know where to stop :]
