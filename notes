@@ -9,3 +9,5 @@ so, first we get the static i (start into the existing buffer if not null);
 	if there isn't, start reading again, all while appending to our str, realloc type beat, on repeat until either \n or \0 encountered.
 
 !!remember, fill the buffer with nuls when unused so we know where to stop :]
+
+alright, tested now at least once against one of those, only issue encountered is the timeout for one very long line on a one [1] size buffer. i don't feel personally upset with this, and i doubt it'll matter when we get actually corrected by the machine. will ask around though.
